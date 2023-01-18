@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useState, useEffect } from 'react';
 import css from './App.module.css';
 import Searchbar from 'components/Searchbar/Searchbar';
@@ -47,7 +49,7 @@ const App = () => {
       setLoader(false);
       setLoadMore(page < Math.ceil(data.total / 12) ? true : false);
     });
-  }, [search, page, images]);
+  }, [search, page]);
 
   const addImageURL = url => {
     setImageURL(url);
