@@ -47,7 +47,7 @@ const App = () => {
       setLoader(false);
       setLoadMore(page < Math.ceil(data.total / 12) ? true : false);
     });
-  }, [search, page]);
+  }, [search, page, images]);
 
   const addImageURL = url => {
     setImageURL(url);
